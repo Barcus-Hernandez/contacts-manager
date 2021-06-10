@@ -1,15 +1,39 @@
-public class Contacts extends ContactsUpdate {
+public class Contacts  {
 
     private String firstName;
     private String lastName;
-    private int phoneNumber;
+    private String phoneNumber;
 
-    public Contacts (String firstName, String lastName, int phoneNumber){
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+
+    public Contacts (String firstName, String lastName, String phoneNumber){
 
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
-
 
     }
 
@@ -17,9 +41,5 @@ public class Contacts extends ContactsUpdate {
         return this.firstName + " " + this.lastName + " PH:" + this.phoneNumber;
     }
 
-    public static void main(String[] args) {
-        ContactsUpdate contact = new Contacts("Alex","Hernandez","123456789");
-
-    }
 
 }
