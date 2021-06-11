@@ -11,9 +11,10 @@ import java.util.Scanner;
 
 public class ContactsUpdate {
 
-    public void readFile(pathToFile) throws IOException {
-        List<String>
+    public void readFile (Path pathToFile) throws IOException {
+
     }
+
     public static List<Contacts> contactsList = new ArrayList<>();
 
 
@@ -25,6 +26,28 @@ public class ContactsUpdate {
         System.out.println("4. Delete an existing contact.");
         System.out.println("5. Exit.");
         System.out.println("Enter an option (1, 2, 3, 4 or 5):");
+
+
+        // TODO: 6/10/21 Build methods so that they return user selection form the main menu 
+        System.out.println(menu());
+        switch (menu()){
+            case 1:
+                //View Contacts List
+                viewContacts();
+                break;
+            case 2:
+                addContact();
+                break;
+            case 3:
+                searchContact();
+                break;
+            case 4:
+                deleteContact();
+                break;
+            case 5:
+                exitProgram();
+
+        }
 
         Scanner userInput = new Scanner(System.in);
         int userChoice = userInput.nextInt();
@@ -57,25 +80,7 @@ public class ContactsUpdate {
 
 
     public static void main(String[] args) {
-        System.out.println(menu());
-        switch (menu()){
-            case 1:
-                //View Contacts List
-                viewContacts();
-                break;
-            case 2:
-                addContact();
-                break;
-            case 3:
-                searchContact();
-                break;
-            case 4:
-                deleteContact();
-                break;
-            case 5:
-                exitProgram();
 
-        }
 
 
         Contacts contactInfo = new Contacts("Rose", "Barcus", "2105555555");
