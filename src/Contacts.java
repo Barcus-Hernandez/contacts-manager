@@ -16,7 +16,7 @@ public class Contacts  {
     }
 
     public String getPhoneNumber() {
-        return phoneNumber;
+        return phoneNumber.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1)-$2-$3");
     }
 
     public String getName() {
