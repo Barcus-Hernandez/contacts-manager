@@ -1,8 +1,3 @@
-//package src;
-
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -19,13 +14,27 @@ public class ContactsUpdate {
 
 
 
-    public static int menu () {
+    public static void menu (Path path) {
         System.out.println("1. View contacts.");
         System.out.println("2. Add a new contact.");
         System.out.println("3. Search a contact by name.");
         System.out.println("4. Delete an existing contact.");
         System.out.println("5. Exit.");
         System.out.println("Enter an option (1, 2, 3, 4 or 5):");
+        Input input = new Input();
+        int in = input.getInt(1, 5);
+        for(String selection : list.keySet()){
+            System.out.printf("You selected %n, %s", num, selection);
+        }
+        String selectionStart = "";
+        while(!list.containsKey(selectionStart)){
+            selectionStart = in.getString("What would you like to do?");
+            if(!list.containsKey(selectionStart)){
+                System.out.println("Selection invalid. \n Please try again.");
+            }
+        }
+
+
 
 
         // TODO: 6/10/21 Build methods so that they return user selection form the main menu 
