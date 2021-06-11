@@ -32,14 +32,6 @@ public class ContactsUpdate {
             if(!list.containsKey(selectionStart)){
                 System.out.println("Selection invalid. \n Please try again.");
             }
-        }
-
-
-
-
-        // TODO: 6/10/21 Build methods so that they return user selection form the main menu 
-        System.out.println(menu());
-        switch (menu()){
             case 1:
                 //View Contacts List
                 viewContacts();
@@ -55,8 +47,14 @@ public class ContactsUpdate {
                 break;
             case 5:
                 exitProgram();
-
         }
+
+        // TODO: 6/10/21 Build methods so that they return user selection form the main menu 
+        System.out.println(menu());
+//        switch (menu()){
+//
+//
+//        }
 
         Scanner userInput = new Scanner(System.in);
         int userChoice = userInput.nextInt();
@@ -87,16 +85,11 @@ public class ContactsUpdate {
     }
 
 
-
     public static void main(String[] args) {
-
-
-
         Contacts contactInfo = new Contacts("Rose", "Barcus", "2105555555");
         System.out.println(contactInfo);
 
     }
-
 
 
 }
